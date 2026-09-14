@@ -1,0 +1,266 @@
+site_name: ProjectPy
+site_description: The complete, human-friendly Python documentation platform — from your first print("hello") to writing C extensions. Covers tutorials, standard library, language reference, HOWTOs, FAQs, and developer guides. Maintained by Souhardya Das.
+site_author: Souhardya Das
+site_url: https://projectpy.dev/
+repo_name: projectpy70/projectpy
+repo_url: https://github.com/projectpy70/projectpy
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; 2024–2026 Souhardya Das. Released under the MIT License.
+
+# Python version badge shown in header (update this with each release)
+extra:
+  python_version: "3.14"
+  author:
+    name: Souhardya Das
+    github: https://github.com/Sdas2003810
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/projectpy70/projectpy
+      name: ProjectPy on GitHub
+    - icon: fontawesome/brands/github
+      link: https://github.com/Sdas2003810
+      name: Souhardya Das on GitHub
+    - icon: fontawesome/brands/python
+      link: https://python.org
+      name: Python.org
+  version:
+    provider: mike
+    default: stable
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  favicon: assets/favicon.ico
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+    - toc.follow
+
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/language-python
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - stylesheets/extra.js
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.tilde
+  - pymdownx.smartsymbols
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - tables
+  - def_list
+  - footnotes
+  - abbr
+  - meta
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+plugins:
+  - search:
+      separator: '[\s\-\.]+'
+  - minify:
+      minify_html: true
+
+nav:
+  - Home: index.md
+
+  - Tutorial:
+      - Whetting Your Appetite: getting-started/whetting-appetite.md
+      - Introduction to Python: getting-started/introduction.md
+      - Installation Guide: getting-started/installation.md
+      - Using the Python Interpreter: getting-started/interpreter.md
+      - Numbers and Arithmetic: fundamentals/numbers-and-math.md
+      - Strings: fundamentals/strings.md
+      - Variables and Types: fundamentals/variables-and-types.md
+      - Lists: fundamentals/lists.md
+      - Tuples: fundamentals/tuples.md
+      - Dictionaries and Sets: fundamentals/dictionaries-and-sets.md
+      - Control Flow: fundamentals/control-flow.md
+      - Loops: fundamentals/loops.md
+      - Functions: fundamentals/functions.md
+      - Scope and Namespaces: fundamentals/scope-and-namespaces.md
+      - Floating-Point Arithmetic: fundamentals/floating-point.md
+      - Input and Output: fundamentals/input-output.md
+      - Data Structures (Advanced): fundamentals/data-structures.md
+      - Comprehensions: core/comprehensions.md
+      - File Handling: core/file-io.md
+      - Errors and Exceptions: core/errors-and-exceptions.md
+      - Modules and Packages: core/modules-and-environments.md
+      - Classes and OOP: core/oop.md
+      - Iterators and Generators: core/iterators-and-generators.md
+      - Context Managers: core/context-managers.md
+      - Decorators and Generators: advanced/decorators-and-generators.md
+      - Asyncio and Concurrency: advanced/asyncio-concurrency.md
+      - Type Annotations: advanced/type-hints.md
+      - Special (Dunder) Methods: advanced/dunder-methods.md
+      - Metaclasses: advanced/metaclasses.md
+      - Descriptors: advanced/descriptors.md
+      - Functional Programming: advanced/functional-programming.md
+      - Pattern Matching (3.10+): advanced/pattern-matching.md
+      - Walrus Operator (3.8+): advanced/walrus-operator.md
+
+  - Standard Library:
+      - Overview: standard-library/overview.md
+      - Coverage Status: coverage.md
+      - Built-in Types and Functions: reference/built-in-functions.md
+      - String Module: standard-library/string-module.md
+      - Pathlib — Modern Paths: standard-library/pathlib.md
+      - Filesystem Utilities (shutil, tempfile): standard-library/shutil-tempfile.md
+      - OS, Sys, Subprocess: standard-library/os-sys-subprocess.md
+      - IO and Serialization: standard-library/io-and-serialization.md
+      - Math, Random, Statistics: standard-library/math-and-random.md
+      - Priority Queues and Binary Search (heapq, bisect): standard-library/heapq-bisect.md
+      - Object Copying (copy): standard-library/copy-module.md
+      - Date and Time: standard-library/datetime-module.md
+      - Regular Expressions: standard-library/regex.md
+      - Data Formats (json, csv, sqlite3): standard-library/databases-and-json.md
+      - Collections and Itertools: standard-library/collections-itertools.md
+      - Functools: standard-library/functools.md
+      - Enum: standard-library/enum.md
+      - Dataclasses: standard-library/dataclasses.md
+      - Typing Module: standard-library/typing-module.md
+      - Context Management (contextlib): standard-library/contextlib.md
+      - Threading and Multiprocessing: standard-library/threading-multiprocessing.md
+      - Networking (socket, urllib, http): standard-library/networking.md
+      - Argument Parsing (argparse): standard-library/argparse.md
+      - Hashing and Secrets: standard-library/hashlib-secrets.md
+      - Testing and Logging: standard-library/testing-and-logging.md
+      - Mocking and Testing (unittest.mock): standard-library/unittest-mock.md
+      - Interactive Debugger (pdb): standard-library/pdb-debugger.md
+      - Warnings and Deprecations: standard-library/warnings-deprecation.md
+
+  - Language Reference:
+      - Introduction: language-reference/introduction.md
+      - Lexical Analysis: language-reference/lexical-analysis.md
+      - Data Model: language-reference/data-model.md
+      - Execution Model: language-reference/execution-model.md
+      - The Import System: language-reference/import-system.md
+      - Expressions: language-reference/expressions.md
+      - Simple Statements: language-reference/statements.md
+      - Compound Statements: language-reference/compound-statements.md
+      - Top-Level Components: language-reference/top-level-components.md
+      - Full Grammar Specification: language-reference/full-grammar.md
+
+  - Guides & HOWTOs:
+      - Setup and Usage:
+          - Command Line and Environment: setup-usage/cmdline.md
+          - Python on Windows: setup-usage/python-on-windows.md
+          - Python on macOS: setup-usage/python-on-mac.md
+          - Python on Unix/Linux: setup-usage/python-on-unix.md
+          - Virtual Environments: setup-usage/virtual-environments.md
+          - Editors and IDEs: setup-usage/editors-and-ides.md
+      - Packaging:
+          - Installing Python Modules: packaging/installing-modules.md
+          - Distributing Packages: packaging/distributing-packages.md
+          - pip and PyPI: packaging/pypi-and-pip.md
+          - Virtual Environments (venv): packaging/virtual-environments-venv.md
+      - Practical HOWTOs:
+          - Regular Expressions HOWTO: howto/regex-howto.md
+          - Sorting HOWTO: howto/sorting.md
+          - Functional Programming HOWTO: howto/functional-programming-howto.md
+          - Logging HOWTO: howto/logging-howto.md
+          - Unicode HOWTO: howto/unicode-howto.md
+          - urllib HOWTO: howto/urllib-howto.md
+          - argparse HOWTO: howto/argparse-howto.md
+          - Descriptor HOWTO: howto/descriptor-howto.md
+          - Enum HOWTO: howto/enum-howto.md
+          - Annotations HOWTO: howto/annotations-howto.md
+          - Perf Profiling: howto/perf_profiling.md
+      - Developer Guide:
+          - Extending Python with C: extending/extending-with-c.md
+          - Defining Extension Types: extending/defining-extension-types.md
+          - Building C Extensions: extending/building-c-extensions.md
+          - Python/C API Overview: c-api/overview.md
+          - How CPython Works: internals/how-cpython-works.md
+
+  - Reference & FAQs:
+      - Quick Cheat Sheet: reference/cheat-sheet.md
+      - Operators and Precedence: reference/operators.md
+      - Built-in Exceptions: reference/exceptions-hierarchy.md
+      - Special Attributes: reference/special-attributes.md
+      - Data Model Reference: reference/data-model.md
+      - FAQs:
+          - General Python FAQ: faq/general-faq.md
+          - Programming FAQ: faq/programming-faq.md
+          - Design and History FAQ: faq/design-history-faq.md
+          - Library and Extension FAQ: faq/library-extensions-faq.md
+          - Python on Windows FAQ: faq/windows-faq.md
+          - GUI FAQ: faq/gui-faq.md
+      - Troubleshooting:
+          - Common Errors and Fixes: troubleshooting/common-errors.md
+
+  - What's New:
+      - Overview: whats-new/index.md
+      - Python 3.14: whats-new/3.14.md
+      - Python 3.13: whats-new/3.13.md
+      - Python 3.12: whats-new/3.12.md
+      - Python 3.11: whats-new/3.11.md
+      - Python 3.10: whats-new/3.10.md
+      - Python 3.9: whats-new/3.9.md
+
+  - Community:
+      - How to Contribute: community/contributing.md
+      - Code of Conduct: community/code-of-conduct.md

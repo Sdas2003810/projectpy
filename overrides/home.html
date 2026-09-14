@@ -1,0 +1,79 @@
+{% extends "main.html" %}
+
+{% block tabs %}
+  {{ super() }}
+
+  {# ========================================================================
+     ProjectPy — Homepage Hero Override
+     ======================================================================== #}
+  <section class="py-hero-section" aria-label="ProjectPy hero">
+
+    {# Layered glowing ambient background #}
+    <div class="py-hero-glow" aria-hidden="true"></div>
+    <div class="py-hero-glow-secondary" aria-hidden="true"></div>
+
+    <div class="py-hero-content md-typeset">
+
+      {# Main Title #}
+      <h1 class="py-hero-title">ProjectPy</h1>
+
+      {# Tagline & Description #}
+      <p class="py-hero-tagline">
+        Python documentation designed for beginners and newcomers.
+      </p>
+
+      <p class="py-hero-desc">
+        Learn Python step by step with simple explanations, hands-on examples,
+        and easy-to-follow guides. From writing your very first line of code to exploring
+        the standard library, building real projects, and understanding advanced topics —
+        everything is clear, practical, and approachable.
+      </p>
+
+      {# Action CTA Buttons #}
+      <div class="py-hero-actions">
+        <a href="{{ 'getting-started/whetting-appetite/' | url }}" class="py-btn py-btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 3L4 14h7l-2 7 9-11h-7z"/></svg>
+          Start Learning
+        </a>
+        <a href="{{ 'getting-started/installation/' | url }}" class="py-btn py-btn-outline">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h4.84v4h3.66V9h4.84L12 2z"/></svg>
+          Install Python
+        </a>
+        <a href="{{ 'reference/cheat-sheet/' | url }}" class="py-btn py-btn-outline">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Cheat Sheet
+        </a>
+        <a href="{{ 'coverage/' | url }}" class="py-btn py-btn-outline">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+          Coverage Matrix
+        </a>
+      </div>
+
+      {# Code Showcase #}
+      <div class="py-hero-showcase" role="region" aria-label="Hello World Example">
+        <div class="py-hero-showcase-bar">
+          <div class="py-hero-dots">
+            <span class="dot-r"></span>
+            <span class="dot-y"></span>
+            <span class="dot-g"></span>
+          </div>
+          <div class="py-hero-tab">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 2a8 8 0 0 1 8 8a8 8 0 0 1-8 8a8 8 0 0 1-8-8a8 8 0 0 1 8-8m-1 3v6l5.25 3.15l.75-1.23l-4.5-2.67V7z"/></svg>
+            hello.py
+          </div>
+          <span class="py-hero-badge-tag">Python 3.14</span>
+        </div>
+        <pre class="py-hero-code"><code><span class="syn-builtin">print</span>(<span class="syn-string">"Hello, World!"</span>)</code></pre>
+        <div class="py-hero-showcase-output">
+          <span class="py-output-prompt">&gt;&gt;&gt;</span>
+          <span class="py-output-text">Hello, World!</span>
+        </div>
+      </div>
+
+      <p class="py-hero-meta">
+        Maintained by <a href="https://github.com/Sdas2003810" target="_blank" rel="noopener"><strong>Souhardya Das</strong></a> · Community contributions welcome
+      </p>
+
+    </div>
+  </section>
+{% endblock %}
